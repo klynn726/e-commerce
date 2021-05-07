@@ -3,8 +3,6 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-// the above comment is from the starter code and i do 
-// not understand what it's referencing
 
 router.get('/', (req, res) => {
   // find all categories
@@ -36,7 +34,6 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'id',
       'category_name'
     ],
     include: [

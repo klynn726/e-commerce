@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
-// does this need to be included? the above comment was from the starter code
 
 
 // get all products
@@ -21,11 +20,11 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Category,
-        attributes: ['id', 'category_name']
+        attributes: ['category_name']
       },
       {
         model: Tag,
-        attributes: ['id', 'tag_name']
+        attributes: ['tag_name']
       }
     ]
   })
