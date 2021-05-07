@@ -21,22 +21,22 @@ Product.init(
     },
     price: {
       type: DataTypes.DECIMAL,
-      allowNull: false
-      // validate: {
-      //   DECIMAL
-      // }
+      allowNull: false,
+      validate: DataTypes.DECIMAL
     },
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false
-      // default: "10",
-      // validate: {
-      //   NUMERIC
-      // }
+      allowNull: false,
+      defaultValue: 10,
+      validate: DataTypes.INTEGER
     },
     category_id: {
       type: DataTypes.INTEGER,
       //references the category models id
+      references: {
+        model: 'category',
+        key: 'id'
+      }      
     }
   },
   {
