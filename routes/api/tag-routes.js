@@ -19,8 +19,9 @@ router.get('/', (req, res) => {
           'id',
           'product_name',
           'price',
-          'stock',
-          'category_id'    ]    
+          'stock'
+         ],
+         through: ProductTag  
       }
     ]
   })
@@ -51,8 +52,9 @@ router.get('/:id', (req, res) => {
           'id',
           'product_name',
           'price',
-          'stock',
-          'category_id'    ]    
+          'stock'
+          ],
+          through: ProductTag 
       }
     ]
   })

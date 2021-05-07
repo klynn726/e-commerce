@@ -3,6 +3,8 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
+//   http://localhost:3001/api/categories    
+
 
 router.get('/', (req, res) => {
   // find all categories
@@ -25,6 +27,8 @@ router.get('/', (req, res) => {
   });
 
 });
+
+//     http://localhost:3001/api/categories/4  
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
@@ -56,6 +60,8 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//    http://localhost:3001/api/categories    {"category_name":"Socks"}
+
 router.post('/', (req, res) => {
   // create a new category
   Category.create({
@@ -68,6 +74,8 @@ router.post('/', (req, res) => {
     });
 
 });
+
+//    http://localhost:3001/api/categories/6      {"category_name":"Movies"}
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
@@ -94,6 +102,8 @@ router.put('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
+//     http://localhost:3001/api/categories/6  
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
