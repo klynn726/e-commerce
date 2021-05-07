@@ -35,4 +35,6 @@ Katherine Lynn with starter code from Xandromus
 
 ## Walkthrough link:
 
+[first half:](https://drive.google.com/file/d/1E6zzX80ySsDvm_BySeRKvevp2qyuoG2E/preview)
 
+[second half:](https://drive.google.com/file/d/1RouZ5MGTGo8WytUVEiLrmxOpigJiIDYT/preview)

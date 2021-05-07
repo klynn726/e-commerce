@@ -22,14 +22,18 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-      validate: DataTypes.DECIMAL
-    },
+      validate: {
+        isDecimal: true
+      }   
+     },
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
-      validate: DataTypes.INTEGER
-    },
+      validate: {
+        isInt: true
+      }   
+     },
     category_id: {
       type: DataTypes.INTEGER,
       //references the category models id
@@ -49,3 +53,5 @@ Product.init(
 );
 
 module.exports = Product;
+
+// https://sequelize.org/v5/manual/models-definition.html#validations for validation syntax

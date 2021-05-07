@@ -3,6 +3,8 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
+//    http://localhost:3001/api/tags
+
 router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
@@ -32,6 +34,8 @@ router.get('/', (req, res) => {
     });
 
 });
+
+//    http://localhost:3001/api/tags/5
 
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
@@ -73,6 +77,8 @@ router.get('/:id', (req, res) => {
 
 });
 
+//    http://localhost:3001/api/tags     {"tag_name": "Sparkles"}
+
 router.post('/', (req, res) => {
   // create a new tag
 
@@ -85,6 +91,8 @@ router.post('/', (req, res) => {
       res.status(400).json(err);
     });
 });
+
+//     http://localhost:3001/api/tags/2     {"tag_name":"Shiny"}     
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
@@ -112,6 +120,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// http://localhost:3001/api/tags/8
 
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
