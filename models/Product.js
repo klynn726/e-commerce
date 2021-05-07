@@ -15,7 +15,7 @@ Product.init(
       primaryKey: true,
       autoIncrement: true
     },
-    product_next: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -24,7 +24,7 @@ Product.init(
       allowNull: false,
       validate: DataTypes.DECIMAL
     },
-    id: {
+    stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
